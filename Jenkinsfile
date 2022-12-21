@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh '.sonar/build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir bw-output gcc main.c'
+                sh '.sonar/build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir bw-output make'
             }
         }
         stage('Static Code Analysis') {
